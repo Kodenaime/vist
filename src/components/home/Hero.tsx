@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router';
 
 const Hero: React.FC = () => {
   const containerRef = useRef(null);
@@ -53,12 +54,12 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="hero-animate flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold flex items-center justify-center gap-2 transition-all group">
+            <Link to="/services" className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold flex items-center justify-center gap-2 transition-all group">
               Explore Services <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full font-bold transition-all">
+            </Link>
+            <Link to="/about" className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full font-bold transition-all">
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
 

@@ -1,45 +1,34 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
+import React, { useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const navRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    gsap.set(navRef.current, { opacity: 1 });
-    
-    gsap.from(navRef.current, {
-      y: -100,
-      opacity: 0,
-      duration: 1.2,
-      ease: "expo.out",
-      delay: 0.2
-    });
-  }, []);
-
+  
   return (
     <>
       <nav 
         ref={navRef}
         className="fixed top-0 left-0 w-full z-100 flex items-center justify-between px-6 md:px-12 py-5 transition-all duration-300 bg-black/10 backdrop-blur-sm border-b border-white/5"
       >
-        {/* 1. Logo Section */}
-        <div className="flex items-center gap-2 cursor-pointer relative z-50">
-          <div className="text-xl md:text-2xl font-bold tracking-tight text-white flex items-center">
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-indigo-500">VIS</span>
-            <span className="ml-2 text-[10px] md:text-xs font-light tracking-[0.3em] uppercase opacity-70 hidden sm:block">Technology</span>
-          </div>
-        </div>
+        <div className='flex items-center gap-9 md:gap-16'>
+            {/* 1. Logo Section */}
+            <div className="flex items-center gap-2 cursor-pointer relative z-50">
+            <div className="text-xl md:text-2xl font-bold tracking-tight text-white flex items-center">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-indigo-500">VIS</span>
+                <span className="ml-2 text-[10px] md:text-xs font-light tracking-[0.3em] uppercase opacity-70 hidden sm:block">Technology</span>
+            </div>
+            </div>
 
-        {/* 2. Desktop Navigation Pill */}
-        <div className="hidden lg:flex items-center px-8 py-2.5 bg-white/3 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl">
-          <ul className="flex items-center gap-10 text-[13px] font-medium text-gray-400">
-            <li className="hover:text-white transition-colors"><a href="/">Home</a></li>
-            <li className="hover:text-white transition-colors"><a href="/about">About</a></li>
-            <li className="hover:text-white transition-colors"><a href="/services">Services</a></li>
-            <li className="hover:text-white transition-colors text-[11px] opacity-40"><a href="/terms">Terms</a></li>
-          </ul>
+            {/* 2. Desktop Navigation Pill */}
+            <div className="hidden lg:flex items-center px-8 py-2.5 bg-white/3 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl">
+            <ul className="flex items-center gap-10 text-[13px] font-medium text-gray-400">
+                <li className="hover:text-white hover:border-b transition-colors"><a href="/">Home</a></li>
+                <li className="hover:text-white hover:border-b transition-colors"><a href="/about">About</a></li>
+                <li className="hover:text-white hover:border-b transition-colors"><a href="/services">Services</a></li>
+            </ul>
+            </div>
         </div>
 
         {/* 3. Desktop Action Area */}

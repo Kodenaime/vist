@@ -1,5 +1,5 @@
 import React from 'react';
-import { Monitor, Cloud, Shield, Cpu, Code, Database } from 'lucide-react';
+import { Monitor, Cloud, Cpu, Code } from 'lucide-react';
 
 const pulseAnimation = `
   @keyframes pulse-slow {
