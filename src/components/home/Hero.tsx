@@ -4,22 +4,27 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
 
 const Hero: React.FC = () => {
-  const containerRef = useRef(null);
-  const textRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(textRef.current?.children || [], {
+  const ctx = gsap.context(() => {
+    if (textRef.current) {
+      const elements = Array.from(textRef.current.children);
+      
+      gsap.from(elements, {
         y: 50,
         opacity: 0,
         stagger: 0.2,
         duration: 1.2,
         ease: "power4.out",
-        delay: 0.8
+        delay: 0.5
       });
-    }, containerRef);
-    return () => ctx.revert();
-  }, []); 
+    }
+  }, containerRef);
+  
+  return () => ctx.revert();
+}, []); 
 
   return (
     <section ref={containerRef} className="relative min-h-screen pt-32 pb-20 px-6 md:px-12 flex items-center overflow-hidden">
