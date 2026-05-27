@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router';
 
 const Navbar: React.FC = () => {
   const navRef = useRef(null);
@@ -14,19 +15,16 @@ const Navbar: React.FC = () => {
       >
         <div className='flex items-center gap-9 md:gap-16'>
             {/* 1. Logo Section */}
-            <div className="flex items-center gap-2 cursor-pointer relative z-50">
-            <div className="text-xl md:text-2xl font-bold tracking-tight text-white flex items-center">
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-indigo-500">VIS</span>
-                <span className="ml-2 text-[10px] md:text-xs font-light tracking-[0.3em] uppercase opacity-70 hidden sm:block">Technology</span>
-            </div>
-            </div>
+            <Link to="/" className="cursor-pointer">
+              <img src="/whitelogo.png" alt="VIS Tech logo" className='h-15 w-20' />
+            </Link>
 
             {/* 2. Desktop Navigation Pill */}
             <div className="hidden lg:flex items-center px-8 py-2.5 bg-white/3 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl">
             <ul className="flex items-center gap-10 text-[13px] font-medium text-gray-400">
-                <li className="hover:text-white hover:border-b transition-colors"><a href="/">Home</a></li>
-                <li className="hover:text-white hover:border-b transition-colors"><a href="/about">About</a></li>
+                <li className="hover:text-white hover:border-b transition-colors"><a href="/">Home</a></li>                
                 <li className="hover:text-white hover:border-b transition-colors"><a href="/services">Services</a></li>
+                <li className="hover:text-white hover:border-b transition-colors"><a href="/about">About Odion AI</a></li>
             </ul>
             </div>
         </div>
@@ -36,9 +34,9 @@ const Navbar: React.FC = () => {
           <a href="tel:+2348033432310" className="text-sm font-medium text-gray-300 hover:text-purple-400 transition-colors [cite: 100, 101]">
             +234 803 343 2310 
           </a>
-          <button className="px-7 py-2.5 bg-white text-black rounded-full text-sm font-bold hover:bg-purple-500 hover:text-white transition-all duration-300 active:scale-95 shadow-lg shadow-purple-500/20">
+          <Link to="/contact" className="px-7 py-2.5 bg-white text-black rounded-full text-sm font-bold hover:bg-purple-500 hover:text-white transition-all duration-300 active:scale-95 shadow-lg shadow-purple-500/20">
             Contact Us
-          </button>
+          </Link>
         </div>
 
         {/* 4. Mobile Toggle */}

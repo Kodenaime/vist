@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
@@ -54,9 +55,9 @@ const ContactSection: React.FC = () => {
              <div className="aspect-square w-full rounded-[44px] bg-slate-900 flex flex-col items-center justify-center p-12 text-center space-y-6">
                 <h3 className="text-2xl font-bold text-white italic">Ready to Cook?</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">Fill out our request consultation form to streamline your business efficiencies.</p>
-                <button className="mt-4 px-10 py-4 bg-white text-black rounded-full font-bold flex items-center gap-3 hover:bg-purple-500 hover:text-white transition-all">
+                <Link to="/contact" className="mt-4 px-10 py-4 bg-white text-black rounded-full font-bold flex items-center gap-3 hover:bg-purple-500 hover:text-white transition-all">
                   Request Consultation <Send size={18} />
-                </button>
+                </Link>
              </div>
           </div>
         </div>

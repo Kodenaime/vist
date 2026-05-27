@@ -96,7 +96,7 @@ const ServiceDetails:React.FC = () => {
           Our Services
         </h1>
         <p className="text-gray-500 max-w-2xl leading-relaxed">
-          At Vauntageo Integrated Systems Technology (VIST), we offer a comprehensive range of cutting-edge technology solutions designed to help our clients solve business challenges.  119]
+          At Vauntageo Integrated Systems Technology (VIST), we offer a comprehensive range of cutting-edge technology solutions designed to help our clients solve business challenges.
         </p>
       </div>
 

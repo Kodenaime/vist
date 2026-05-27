@@ -23,7 +23,7 @@ const OdionDeepDive: React.FC = () => {
 }, []);
 
   return (
-    <section ref={scrollRef} className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
+    <section ref={scrollRef} className="mt-4 md:mt-8 py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What is Odion AI?</h2>
         <div className="h-1.5 w-32 bg-linear-to-r from-purple-500 to-indigo-500 mx-auto rounded-full" />
@@ -33,7 +33,7 @@ const OdionDeepDive: React.FC = () => {
         <div className="card-reveal space-y-6">
           <p className="text-gray-300 text-lg leading-relaxed">
             Odion AI offers businesses a dedicated channel number equipped with a built-in AI customer support agent. 
-            It answers in your brand voice, delivering a natural experience that handles requests end-to-end[cite: 19, 43].
+            It answers in your brand voice, delivering a natural experience that handles requests end-to-end.
           </p>
           
           <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
@@ -41,17 +41,14 @@ const OdionDeepDive: React.FC = () => {
               <Zap size={18} /> The "AI Airtime" Model
             </h4>
             <p className="text-gray-400 text-sm">
-              Businesses subscribe to "AI airtime" at a premium rate to activate and keep the service running seamlessly[cite: 20].
+              Businesses subscribe to "AI airtime" at a premium rate to activate and keep the service running seamlessly.
             </p>
           </div>
         </div>
 
         <div className="card-reveal relative aspect-video rounded-[32px] overflow-hidden border border-white/10 bg-white/5">
            {/* Image: AI Robot with headset at workstation */}
-           <div className="absolute inset-0 bg-linear-to-tr from-indigo-500/20 to-transparent" />
-           <div className="w-full h-full flex items-center justify-center text-gray-700 italic">
-             [AI Voice Agent Interface Visual]
-           </div>
+           <img src="/images/about1.webp" alt="" />
         </div>
       </div>
 
@@ -65,7 +62,7 @@ const OdionDeepDive: React.FC = () => {
           },
           { 
             title: "Smart Escalation", 
-            desc: "Transfers to a human only when issues exceed predefined thresholds or by request[cite: 49, 53].", 
+            desc: "Transfers to a human only when issues exceed predefined thresholds or by request.", 
             icon: <UserCheck /> 
           },
           { 
@@ -75,7 +72,7 @@ const OdionDeepDive: React.FC = () => {
           },
           { 
             title: "Actionable Insights", 
-            desc: "Receive call summaries and performance analytics after every interaction[cite: 55, 57].", 
+            desc: "Receive call summaries and performance analytics after every interaction.", 
             icon: <Zap /> 
           }
         ].map((feature, i) => (

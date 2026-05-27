@@ -56,7 +56,7 @@ const HowItWorks: React.FC = () => {
               <ShieldAlert className="text-indigo-400" /> Maintaining Human Oversight
             </h4>
             <p className="text-gray-400 text-sm leading-relaxed">
-              The escalation to a human representative can be triggered either by direct customer request or automatically when complex issues exceed predefined thresholds[cite: 53]. This ensures improved customer experience and continuous service availability while keeping your team in control where necessary.
+              The escalation to a human representative can be triggered either by direct customer request or automatically when complex issues exceed predefined thresholds. This ensures improved customer experience and continuous service availability while keeping your team in control where necessary.
             </p>
          </div>
          <div className="flex-1 grid grid-cols-2 gap-4">

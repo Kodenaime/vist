@@ -31,7 +31,7 @@ const CaseStudies: React.FC = () => {
           <p className="text-gray-500 max-w-md text-sm">Strategic solutions delivered to streamline efficiencies and enhance business operations.</p>
         </div>
         <button className="px-6 py-2 border border-white/10 rounded-full text-xs font-bold text-white uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-          View All Work
+          Some of our Work
         </button>
       </div>
 

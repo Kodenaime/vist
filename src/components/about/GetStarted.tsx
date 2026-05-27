@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 const GetStarted: React.FC = () => {
@@ -54,9 +55,9 @@ const GetStarted: React.FC = () => {
             ))}
           </div>
 
-          <button className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold flex items-center justify-center gap-3 transition-all group shadow-xl shadow-indigo-600/20">
-            Activate AI Airtime <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          <Link to ="/contact" className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold flex items-center justify-center gap-3 transition-all group shadow-xl shadow-indigo-600/20">
+            Get Started <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>
