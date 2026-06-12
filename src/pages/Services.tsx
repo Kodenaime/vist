@@ -1,16 +1,14 @@
-import React from 'react'
-import ServiceDetails from '../components/services/ServiceDetails'
-import CaseStudies from '../components/services/CaseStudies'
-import ContactSection from '../components/services/ContactSection'
+import React from 'react';
+import ServiceDetails from '../components/services/ServiceDetails';
+import ContactSection from '../components/services/ContactSection';
 
 const Services: React.FC = () => {
   return (
-    <div>
-        <ServiceDetails />
-        <CaseStudies />
-        <ContactSection />
-    </div>
-  )
-}
+    <main className="bg-white min-h-screen">
+      <ServiceDetails />
+      <ContactSection />
+    </main>
+  );
+};
 
-export default Services
+export default Services;

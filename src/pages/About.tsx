@@ -1,18 +1,12 @@
-import React from 'react'
-import OdionDeepDive from '../components/about/OdionDeepDive';
-import HowItWorks from '../components/about/HowItWorks';
-import GetStarted from '../components/about/GetStarted';
-import KeyFeatures from '../components/home/KeyFeatures'
+import React from 'react';
+import AboutStory from '../components/about/AboutStory';
 
-const About:React.FC = () => {
+const About: React.FC = () => {
   return (
-    <div>
-      <OdionDeepDive />
-      <KeyFeatures />
-      <HowItWorks />
-      <GetStarted />
-    </div>
-  )
-}
+    <main className="bg-white min-h-screen">
+      <AboutStory />
+    </main>
+  );
+};
 
 export default About;
