@@ -70,6 +70,12 @@ const Footer: React.FC = () => {
                 business.vistechnology@gmail.com
               </a>
             </div>
+            <div className="flex items-center gap-3 text-sm text-gray-400">
+              <Mail size={16} className="text-purple-500 shrink-0" />
+              <a href="mailto:business@vistechnology.ng" className="hover:text-purple-400 transition-colors break-all">
+                business@vistechnology.ng
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -79,7 +85,6 @@ const Footer: React.FC = () => {
         <div className="flex gap-8 text-[11px] text-gray-500 font-bold uppercase tracking-widest order-2 md:order-1">
           <span className="hover:text-purple-400 cursor-pointer transition-colors">Terms</span>
           <span className="hover:text-purple-400 cursor-pointer transition-colors">Privacy Policy</span>
-          <span className="hover:text-purple-400 cursor-pointer transition-colors">Cookies</span>
         </div>
         
         <p className="text-[11px] text-gray-500 font-medium order-3 md:order-2 text-center md:text-left">

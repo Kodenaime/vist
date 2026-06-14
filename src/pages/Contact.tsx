@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
-  // State management for the form submission workflow
   const [status, setStatus] = useState<'IDLE' | 'LOADING' | 'SUCCESS' | 'ERROR'>('IDLE');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -14,7 +13,6 @@ const Contact: React.FC = () => {
     const formData = new FormData(form);
 
     try {
-      // REPLACE YOUR_FORM_ID WITH THE ACTUAL ID FROM YOUR FORMSPREE DASHBOARD
       const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
         method: 'POST',
         body: formData,
@@ -46,7 +44,7 @@ const Contact: React.FC = () => {
             <span className="text-purple-400 text-xs font-bold uppercase tracking-widest block">Get In Touch</span>
             <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tighter">Let's Connect.</h1>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-              Have a project in mind or need expert advisory? Reach out to our team to streamline your enterprise infrastructure[cite: 6, 12].
+              Have a project in mind or need expert advisory? Reach out to our team to streamline your enterprise infrastructure.
             </p>
           </div>
 
@@ -58,6 +56,16 @@ const Contact: React.FC = () => {
               <div>
                 <p className="text-[10px] text-gray-500 uppercase tracking-widest font-medium">Call Us</p>
                 <a href="tel:+2348033432310" className="text-base font-bold text-white hover:text-purple-400 transition-colors">+234 803 343 2310</a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-5 group">
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all">
+                <Mail size={20} />
+              </div>
+              <div>
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-medium">Email Us</p>
+                <a href="mailto:business.vistechnology@gmail.com" className="text-base font-bold text-white hover:text-indigo-400 transition-colors">business.vistechnology@gmail.com</a>
               </div>
             </div>
 
@@ -85,7 +93,7 @@ const Contact: React.FC = () => {
 
         {/* RIGHT COLUMN: Functional Form Panel (Takes 7 columns) */}
         <div className="lg:col-span-7 w-full relative">
-          <div className="bg-white/[0.02] border border-white/10 rounded-[40px] p-8 md:p-12 backdrop-blur-3xl relative overflow-hidden">
+          <div className="bg-white/2 border border-white/10 rounded-[40px] p-8 md:p-12 backdrop-blur-3xl relative overflow-hidden">
             
             {/* Conditional Rendering based on form submission states */}
             {status === 'SUCCESS' ? (
