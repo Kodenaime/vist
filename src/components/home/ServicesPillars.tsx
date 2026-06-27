@@ -85,7 +85,7 @@ const ServicesPillars: React.FC = () => {
         {services.map((item, idx) => (
           <div 
             key={idx} 
-            className="service-card bg-slate-50 hover:bg-white border border-slate-200/60 hover:border-purple-200 p-8 rounded-[32px] shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+            className="service-card bg-purple-300 hover:bg-purple-100 border border-purple-200/60 hover:border-purple-300 p-8 rounded-[32px] shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
           >
             <div className="space-y-6">
               <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shadow-xs">

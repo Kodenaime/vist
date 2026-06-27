@@ -131,7 +131,7 @@ const ServiceDetails: React.FC = () => {
         {serviceList.map((service, index) => (
           <div 
             key={index}
-            className="reveal-service-card group relative p-8 bg-slate-50 hover:bg-white border border-slate-200/60 hover:border-purple-200 rounded-[36px] hover:shadow-xl hover:shadow-purple-100/30 transition-all duration-500 flex flex-col justify-between overflow-hidden"
+            className="reveal-service-card group relative p-8 bg-purple-300 hover:bg-purple-100 border border-purple-200/60 hover:border-purple-300 rounded-[36px] hover:shadow-xl hover:shadow-purple-100/30 transition-all duration-500 flex flex-col justify-between overflow-hidden"
           >
             <div className="space-y-6">
               <div className="flex justify-between items-start">
